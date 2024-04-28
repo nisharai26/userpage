@@ -1,0 +1,16 @@
+<h1>Login</h1>
+<form action="/login" method="post">
+<input type="text" name = "name">
+Password:<input type="password" name="password">
+<input type="submit" value="Submit">
+
+</form>
+{{#if err}}
+<h2>{{err}}</h2>
+{{else}}
+{{#if user}}
+<h1>You are welcome {{user.name}}</h1>
+
+{{/if}}
+{{/if}}
+<a href="/logOut"><Button>Log Out</Button></a>

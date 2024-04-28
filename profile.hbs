@@ -1,0 +1,16 @@
+<h1>Profile</h1>
+<form action="/profile" method="post">
+<input type="text" name = "name">
+Password:<input type="password" name="password">
+<input type="submit" value="Submit">
+</form>
+{{#if err}}
+<h2>{{err}}</h2>
+{{else}}
+<ul>
+    <li>Name:{{user.name}}</li>
+     <li>Age:{{user.age}}</li>
+      <li>Phone Number:{{user.phoneNumber}}</li>
+       <li>DOB:{{user.DOB}}</li>
+</ul>
+{{/if}}
